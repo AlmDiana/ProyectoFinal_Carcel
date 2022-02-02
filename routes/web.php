@@ -32,7 +32,8 @@ Route::middleware(['auth', 'verified'])->group(function ()
     Route::get('/profile', [ProfileInformationController::class, 'edit'])->name('profile');
     Route::put('/profile', [ProfileInformationController::class, 'update'])->name('profile.update');
     Route::put('/password', [PasswordController::class, 'update'])->name('user-password.update');
-    Route::put('/user-avatar', [ProfileAvatarController::class, 'update'])->name('user-avatar.update');
+     Route::put('/user-avatar', [ProfileAvatarController::class, 'update'])->name('user-avatar.update');
+    
 });
 
 
