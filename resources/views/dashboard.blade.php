@@ -15,7 +15,7 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
-    <title>Proyecto Final - Diana</title>
+    <title>Document</title>
 </head>
 
 <body>
