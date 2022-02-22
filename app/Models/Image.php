@@ -26,7 +26,7 @@ class Image extends Model
         return $this->morphTo();
     }
 
-
+    //Obtener la url de la imagen
     public function getUrl(): string
     {
         return Str::startsWith($this->path, 'https://')

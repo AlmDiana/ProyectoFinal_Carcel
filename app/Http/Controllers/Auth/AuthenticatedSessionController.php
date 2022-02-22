@@ -26,7 +26,7 @@ class AuthenticatedSessionController extends Controller
         return redirect()->intended(RouteServiceProvider::HOME);
     }
 
-
+    //Cerrar sesión
     public function destroy(Request $request)
     {
 
