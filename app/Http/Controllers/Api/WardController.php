@@ -8,11 +8,13 @@ use Illuminate\Http\Request;
 
 class WardController extends Controller
 {
-    // Para verificar la acción (CRUD) del usuario por medio de los gates
+    // Para verificar la acción (CRUD) del usuario por medio de los gates:aquí sólo acceden usuarios 
+    // de ROL DIRECTOR
     public function __construct()
     {
         $this->middleware('can:manage-wards')->except('index');
     }
+    
 
 
     /**
@@ -91,8 +93,8 @@ class WardController extends Controller
         {
             //https://laravel.com/docs/8.x/responses#json-responses
             return response()->json([
-            'name' => "The ward $ward->name has assigned guard(s).",
-            'code' => '400',
+                'name' => "The ward $ward->name has assigned guard(s).",
+                'code' => '400',
             ]);
         }
         $ward->state = !$state;

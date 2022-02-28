@@ -30,6 +30,7 @@ class RegisteredUserNotification extends Notification
     public function toMail()
     {
         $login_url = url('/login');
+        
         return (new MailMessage)
             ->subject('Successful user registration')
             ->line('Welcome' . " $this->username")
@@ -39,5 +40,6 @@ class RegisteredUserNotification extends Notification
             ->action('Login', $login_url)
             ->line('Remember: change your password when you verify your email and login to the system.');
     }
+
 
 }

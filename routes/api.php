@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 // https://laravel.com/docs/8.x/controllers#resource-controllers
 
-// Route::resource('wards', WardController::class);
+ Route::resource('wards', WardController::class);
 
 //php artisan route:list --compact
 // php artisan route:list --compact --path=api
@@ -44,6 +44,6 @@ Route::middleware('auth:sanctum')->group(function ()
     Route::delete('/wards/{ward}', [WardController::class, 'destroy']);
 
     //test
-    Route::get('/users/{user}', [WardController::class, 'user_show']);
+    //Route::get('/users/{user}', [WardController::class, 'user_show']);
 
 });

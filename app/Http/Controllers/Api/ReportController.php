@@ -12,7 +12,7 @@ class ReportController extends Controller
     public function list_reports()
     {
         // https://laravel.com/docs/8.x/eloquent-collections#introduction
-        $reports = Report::where('state', true)->get();
+        $reports = Report::where('state', true)->get(); // reports es array de reportes
 
         // https://laravel.com/docs/8.x/eloquent-resources#resource-collections
         return ReportResource::collection($reports);

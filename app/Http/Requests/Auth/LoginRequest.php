@@ -31,12 +31,11 @@ class LoginRequest extends FormRequest
 
     public function authenticate()
     {
-        $id_prisioner = Role::where('name','prisoner')->first()->id;
-        $username_email= $this->input('login_field');
-
-       // dd($id_prisioner);
-
+        
         $this->ensureIsNotRateLimited();
+
+        //NO INGRESO DE PRISIONERO AL SISTEMA-----------
+        $id_prisioner = Role::where('name','prisoner')->first()->id;
         $user_roleId_email = User::where('email',$this->input('login_field'))->first();
         $user_roleId_username = User::where('username',$this->input('login_field'))->first();
         if($user_roleId_email){
@@ -48,9 +47,13 @@ class LoginRequest extends FormRequest
         if($user_roleId===$id_prisioner){
             $username_email='xxxx';
          }
+         
+         //----------------------------------------
 
-        $email_exist = Auth::attempt(['email' => $username_email, 'password' => $this->input('password')], $this->boolean('remember'));
-        $username_exist = Auth::attempt(['username' =>$username_email, 'password' => $this->input('password')], $this->boolean('remember'));
+        $email_exist = Auth::attempt(['email' => $this->input('login_field'), 'password' => $this->input('password')], $this->boolean('remember'));
+
+        $username_exist = Auth::attempt(['username' => $this->input('login_field'), 'password' => $this->input('password')], $this->boolean('remember'));
+
 
         if (!$email_exist && !$username_exist)
         {
@@ -88,3 +91,5 @@ class LoginRequest extends FormRequest
         return Str::lower($this->input('email')) . '|' . $this->ip();
     }
 }
+
+        
