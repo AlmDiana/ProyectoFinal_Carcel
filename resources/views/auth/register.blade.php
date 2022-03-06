@@ -11,7 +11,7 @@
 >
 
     <!--Login Info-->
-    <x-slot name="formTitle">{{"Create Account"}}</x-slot>
+    <x-slot name="formTitle">{{"Create Account - Guard Log"}}</x-slot>
 
     <x-slot name="formDescription">{{"Great, now you can be part of us, just sign up."}}</x-slot>
 
@@ -36,6 +36,7 @@
                          placeholder="Enter your email"
                          required
                          autofocus/>
+                <x-input-error for="email" class="mt-2"/> <!-- validación -->
             </div>
 
 
@@ -53,6 +54,7 @@
                          :value="old('first_name')"
                          placeholder="Enter your first name"
                          required/>
+                <x-input-error for="first_name" class="mt-2"/> <!-- validación -->
             </div>
 
 
@@ -70,6 +72,7 @@
                          :value="old('last_name')"
                          placeholder="Enter your last name"
                          required/>
+                <x-input-error for="last_name" class="mt-2"/> <!-- validación -->
             </div>
 
 
@@ -87,6 +90,7 @@
                          :value="old('personal_phone')"
                          placeholder="Enter your personal phone"
                          required/>
+                <x-input-error for="personal_phone" class="mt-2"/> <!-- validación -->        
             </div>
 
 
@@ -104,6 +108,8 @@
                          :value="old('home_phone')"
                          placeholder="Enter your home phone"
                          required/>
+                <x-input-error for="home_phone" class="mt-2"/> <!-- validación --> 
+                         
             </div>
 
 
@@ -121,6 +127,7 @@
                          :value="old('address')"
                          placeholder="Enter your address"
                          required/>
+                <x-input-error for="address" class="mt-2"/> <!-- validación --> 
             </div>
 
 
@@ -137,6 +144,7 @@
                          name="password"
                          placeholder="Enter your new password"
                          required/>
+                
             </div>
 
 
@@ -153,6 +161,8 @@
                          placeholder="Enter your new password again"
                          required/>
             </div>
+
+            
 
 
 

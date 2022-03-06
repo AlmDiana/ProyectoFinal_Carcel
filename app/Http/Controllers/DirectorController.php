@@ -88,6 +88,7 @@ class DirectorController extends Controller
             'password' => Hash::make($password_generated),
         ]);
 
+        // creación de avatar y se almacena en bd por eloquent y su relación
         $director->image()->create([
             'path' => $director->generateAvatarUrl(),
         ]);

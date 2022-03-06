@@ -37,7 +37,7 @@ class RegisteredUserController extends Controller
 
 
         //dd($request->all());
-
+        // se tiene en memoria el usuario registrado
         $user = User::make([
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
@@ -52,7 +52,7 @@ class RegisteredUserController extends Controller
 
 
         // Se hace una consulta a la BDD y
-        // se asigna el rol al usuario
+        // se asigna el rol GUARDIA al usuario
         // por medio del modelo ROL
         $guard_role = Role::where('name', 'guard')->first();
 
@@ -61,6 +61,10 @@ class RegisteredUserController extends Controller
         event(new Registered($user)); // VERIFICACIÓN DEL CHECK EN EL EMAIL
 
         Auth::login($user);
+        //generación de url para el avatar de guardia
+        $user->image()->create([
+            'path' => $user->generateAvatarUrl(),
+        ]);
 
         return redirect(RouteServiceProvider::HOME);
     }

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 class WardFactory extends Factory
 {
 
-    protected $model = Ward::class;
+    protected $model = Ward::class;  //!!
 
 
     public function definition()
