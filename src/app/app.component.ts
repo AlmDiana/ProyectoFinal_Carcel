@@ -18,7 +18,12 @@ import { ClientelaravelService } from './service/clientelaravel.service';
     } 
 
     log_out(){
-      this.servc.logout();
+      this.servc.logout().subscribe(r=>{
+        console.log(r)
+      })
+
+
+
       if (!confirm('YOU HAVE LOGGED OUT!'))
     {
       

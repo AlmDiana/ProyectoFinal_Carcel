@@ -7,6 +7,7 @@ import { Report } from './Report';
 
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -71,6 +72,7 @@ export class ClientelaravelService {
 
   getWardById(idWard:any)
   {
+
     let token :any;
     token =localStorage.getItem('tokenUser');
     let tokenBearer='Bearer ' + token;
@@ -80,18 +82,20 @@ export class ClientelaravelService {
     return this.httpc.get<Ward>(`${this.wardsUrl}/${idWard}`,{headers:reqHeader});
   }
 
-  logout(){
-    let token :any;
-    token =localStorage.getItem('tokenUser');
-    let tokenBearer='Bearer ' + token;
-    console.log("tokenuser",tokenBearer)
-    let reqHeader = new HttpHeaders({'Authorization':tokenBearer});
-    console.warn()
-    localStorage.removeItem('tokenUser')
-    console.log(token)
-    return token;  
-    
+  //------------------------------LOGOOUT
+  logoutUrl: string = "https://prisonsystem.herokuapp.com/api/logout"
+  
+  logout() 
+  {
+   let token:any="";
+   token =localStorage.getItem('tokenUser');
+   let tokenBearer='Bearer ' + token;
+   let reqHeader = new HttpHeaders({'Authorization':tokenBearer});
+   let data={}
+   console.log("------------------")
+    return this.httpc.post(this.logoutUrl,data, {headers:reqHeader});
   }
+
   
 
   //-----------------------------------------------------------REPORTE
