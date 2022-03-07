@@ -15,5 +15,6 @@ import { ClientelaravelService } from './service/clientelaravel.service';
       console.warn(r); //Presentación de info en consola
       console.table(r[0]);
       })
+    } 
+    
   }
-}

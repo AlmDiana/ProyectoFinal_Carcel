@@ -6,12 +6,19 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WardComponent } from './prison/ward/ward.component';
 import { LoginComponent } from './prison/login/login.component';
+import { ReportComponent } from './prison/report/report.component';
+import { AlertaComponent } from './alerta/alerta.component';
+import { HomeComponent } from './prison/home/home.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     WardComponent,
-    LoginComponent
+    LoginComponent,
+    ReportComponent,
+    AlertaComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

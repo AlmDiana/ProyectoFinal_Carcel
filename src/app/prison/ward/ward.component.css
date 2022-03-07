@@ -1,0 +1,12 @@
+.titles{
+    color:rgb(19, 52, 112);
+    
+}
+.bg{
+    font-family: Nunito;
+    font-weight: bold;
+}
+.bg-pers{
+    background: rgb(99,9,121);
+    background: linear-gradient(90deg, rgba(99,9,121,1) 6%, rgba(18,95,134,0.9780111873851103) 94%);
+}

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Heebo:wght@200&display=swap');
+
+.body2{
+  font-family: 'Nunito';
+}
+
+h2{
+ text-align: center;
+ color:rgb(19, 52, 112);
+ font-weight: bolder;
+}
+.setion1 h1{
+    justify-content: center;
+    text-align: center;
+    padding-left: 50%;
+}
+.Section-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Section-img img{
+  width: 40%;
+}
+.Section-Description h3, .Section-Funtions h3{
+  padding: 30px;
+  color: azure;
+}
+.Section-Description p{
+  font-size: 20px;
+  padding: 30px;
+  color: azure;
+}
+.List{
+    color: azure;
+    font-size: 20px;
+}
+
+.Section-Funtions{
+  padding: 10px;
+  color: azure;
+}
+
+.Footer p{
+  padding: 30px;
+  text-align: center;
+  color: azure;
+  color:rgb(19, 52, 112);
+}
+.bg-pers{
+    background: rgb(99,9,121);
+    background: linear-gradient(90deg, rgba(99,9,121,1) 6%, rgba(18,95,134,0.9780111873851103) 94%);
+}
+.section2 img{
+    width: 15%;
+}
+.sys{
+    text-align: center;
+    justify-content: center;
+    font-family: 'Nunito';
+    color: azure;
+}
+.bg-pers2{
+    background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,0.6222864145658263) 50%, rgba(252,176,69,1) 100%);
+}

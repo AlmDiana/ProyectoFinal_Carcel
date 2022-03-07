@@ -1,0 +1,19 @@
+.bg-dark{
+    background: rgb(24,148,168);
+    background: linear-gradient(90deg, rgba(24,148,168,0.9612044646960347) 0%, rgba(99,9,121,1) 50%, rgba(0,212,255,1) 100%); 
+}
+.bg{
+    font-family: Nunito;
+    font-weight: bold;
+}
+.bg-pers{
+    background: rgb(99,9,121);
+    background: linear-gradient(90deg, rgba(99,9,121,1) 6%, rgba(18,95,134,0.9780111873851103) 94%);
+}
+.nav-item{
+    margin:5px;
+}
+.titles{
+    color:rgb(19, 52, 112);
+    
+}
