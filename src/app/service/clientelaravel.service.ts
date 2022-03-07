@@ -18,7 +18,7 @@ export class ClientelaravelService {
   
 
   //URL a consumir, cambiar por HEROKU 
-  wardsUrl:string = "http://localhost:8000/api/wards"
+  wardsUrl:string = "https://prisonsystem.herokuapp.com/api/wards"
   //Inyección de dependencias
   
   // Recibe array desde URL, Se esepcifica interfaz Ward
@@ -96,7 +96,7 @@ export class ClientelaravelService {
 
   //-----------------------------------------------------------REPORTE
     //URL a consumir, cambiar por HEROKU REPORT
-  reportUrl:string = "http://localhost:8000/api/reports"
+  reportUrl:string = "https://prisonsystem.herokuapp.com/api/reports"
   //Inyección de dependencias
   
   // Recibe array desde URL, Se esepcifica interfaz REPORT

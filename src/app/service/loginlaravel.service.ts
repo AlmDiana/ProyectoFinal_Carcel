@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class LoginLaravelService {
   headers = new Headers();
   
-  loginUrl: string = "http://localhost:8000/api/login";
+  loginUrl: string = "https://prisonsystem.herokuapp.com/api/login";
   
   token:string = " "
   constructor(private httpc: HttpClient, private router: Router) { 
