@@ -15,6 +15,7 @@ class ReportController extends Controller
         $reports = Report::where('state', true)->get(); // reports es array de reportes
 
         // https://laravel.com/docs/8.x/eloquent-resources#resource-collections
-        return ReportResource::collection($reports);
+        //return ReportResource::collection($reports);
+        return $reports;
     }
 }

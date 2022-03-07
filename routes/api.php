@@ -31,20 +31,18 @@ use Illuminate\Support\Facades\Route;
 
 // Public routes
 Route::post('/login', [AuthController::class, 'login']);
-//Route::get('/reports', [ReportController::class, 'list_reports']);
-Route::get('/wards', [WardController::class, 'index']);
-Route::post('/wards', [WardController::class, 'store']);
-Route::get('/wards/{ward}', [WardController::class, 'show']);
-Route::put('/wards/{ward}', [WardController::class, 'update']);
-Route::delete('/wards/{ward}', [WardController::class, 'destroy']);
+Route::get('/reports', [ReportController::class, 'list_reports']);
+
+
 
 // Protected routes
 Route::middleware('auth:sanctum')->group(function ()
 {
     Route::post('/logout', [AuthController::class, 'logout']);
-
-
-    //test
-    //Route::get('/users/{user}', [WardController::class, 'user_show']);
+    Route::get('/wards', [WardController::class, 'index']);
+    Route::post('/wards', [WardController::class, 'store']);
+    Route::get('/wards/{ward}', [WardController::class, 'show']);
+    Route::put('/wards/{ward}', [WardController::class, 'update']);
+    Route::delete('/wards/{ward}', [WardController::class, 'destroy']);
 
 });

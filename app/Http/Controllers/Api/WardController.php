@@ -10,11 +10,11 @@ class WardController extends Controller
 {
     // Para verificar la acción (CRUD) del usuario por medio de los gates:aquí sólo acceden usuarios 
     // de ROL DIRECTOR
-
-    // public function __construct()
-    // {
-    //     $this->middleware('can:manage-wards')->except('index');
-    // }
+    
+     public function __construct()
+     {
+       $this->middleware('can:manage-wards')->except('index');
+     }
     
 
 
