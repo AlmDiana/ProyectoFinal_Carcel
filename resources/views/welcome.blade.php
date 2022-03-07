@@ -7,7 +7,7 @@
         <title>Prison System Backend</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-        <link href="{{asset('static/wel.css') }}" type="text/css" rel="stylesheet">
+        <link href="{{asset('css/wel.css') }}" type="text/css" rel="stylesheet">
 
     </head>
     <body class="container-fluid">
