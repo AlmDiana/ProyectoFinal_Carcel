@@ -52,7 +52,6 @@
                 </div>
 
                 <div class = "section2">
-                    <img  src="https://images.emojiterra.com/google/android-10/512px/1f46e-1f3fb-2642.png" >
 
                 </div>
 
@@ -60,7 +59,6 @@
 
             <div class= "section-about">
                 <div>
-                    <img src="https://img.freepik.com/vector-gratis/nuevo-concepto-estilo-vida-normal-oficiales-policia-personajes-policias-mujer-hombre-seguridad-uniforme-mascara-facial-protegen-coronavirus-covid-19-aislado-ilustracion-fondo-blanco_83111-964.jpg" alt="" srcset="">
                 </div>
                 <div class= "textwhite">
                     <h1> About us </h1>
