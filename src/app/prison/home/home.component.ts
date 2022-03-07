@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginLaravelService } from 'src/app/service/loginlaravel.service';
+import { ClientelaravelService } from 'src/app/service/clientelaravel.service';
 
 @Component({
   selector: 'app-home',
@@ -13,4 +14,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   
   }
+  closelog(){
+    
+  }
+  
 }

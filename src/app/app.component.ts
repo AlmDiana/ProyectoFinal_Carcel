@@ -16,5 +16,19 @@ import { ClientelaravelService } from './service/clientelaravel.service';
       console.table(r[0]);
       })
     } 
+
+    log_out(){
+      this.servc.logout();
+      if (!confirm('YOU HAVE LOGGED OUT!'))
+    {
+      
+      return false;
+    }
+    else
+    {
+      return true;
+    }
+      console.log("salir")
+    }
     
   }

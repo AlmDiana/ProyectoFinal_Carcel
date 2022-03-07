@@ -42,14 +42,20 @@ export class LoginComponent implements OnInit {
     this.http.loginUser(login_field, password).subscribe((r) => {
       console.log("inicio de sesión con exito",r);
       localStorage.setItem('tokenUser', r.token);
+      this.myFormLogin = new FormGroup({
+        login_field: new FormControl(''),
+        password: new FormControl(''),
+      });
       if (!confirm('YOU HAVE SUCCESFULLY LOGGED IN!'))
     {
+      
       return false;
     }
     else
     {
       return true;
     }
+      
     }, (error) => {
       const body = { title: 'No se ha podido iniciar sesión'};
       console.log("Fallo al iniciar, error", error);

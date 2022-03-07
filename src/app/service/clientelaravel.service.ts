@@ -79,6 +79,19 @@ export class ClientelaravelService {
     console.warn(idWard)
     return this.httpc.get<Ward>(`${this.wardsUrl}/${idWard}`,{headers:reqHeader});
   }
+
+  logout(){
+    let token :any;
+    token =localStorage.getItem('tokenUser');
+    let tokenBearer='Bearer ' + token;
+    console.log("tokenuser",tokenBearer)
+    let reqHeader = new HttpHeaders({'Authorization':tokenBearer});
+    console.warn()
+    localStorage.removeItem('tokenUser')
+    console.log(token)
+    return token;  
+    
+  }
   
 
   //-----------------------------------------------------------REPORTE

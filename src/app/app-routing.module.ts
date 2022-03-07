@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'wards', component: WardComponent },
   { path: 'login', component: LoginComponent },
   { path: 'report', component: ReportComponent},
-  { path: '**', redirectTo: '/', pathMatch:'prefix' }
+  { path: '**', redirectTo: 'home', pathMatch:'prefix' }
 ];
 
 
